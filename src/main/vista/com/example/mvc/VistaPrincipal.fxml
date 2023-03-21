@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="562.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mvc.controlador.VistaPrincipal">
+   <children>
+      <ProgressBar id="barravox" fx:id="barravox" layoutX="46.0" layoutY="161.0" prefHeight="46.0" prefWidth="494.0" progress="0.0" />
+      <ProgressBar fx:id="barrapp" layoutX="46.0" layoutY="227.0" prefHeight="46.0" prefWidth="494.0" progress="0.0" />
+      <ProgressBar fx:id="barrapsoe" layoutX="46.0" layoutY="293.0" prefHeight="46.0" prefWidth="494.0" progress="0.0" />
+      <ProgressBar fx:id="barraiu" layoutX="44.0" layoutY="366.0" prefHeight="46.0" prefWidth="494.0" progress="0.0" />
+      <Label alignment="CENTER" layoutY="161.0" prefHeight="46.0" prefWidth="43.0" style="-fx-background-color: #66ff66;" text="VOX" />
+      <Label alignment="CENTER" layoutY="227.0" prefHeight="46.0" prefWidth="43.0" style="-fx-background-color: #00FFFF;" text="PP" />
+      <Label alignment="CENTER" layoutY="293.0" prefHeight="46.0" prefWidth="43.0" style="-fx-background-color: red;" text="PSOE" />
+      <Label alignment="CENTER" layoutY="366.0" prefHeight="46.0" prefWidth="43.0" style="-fx-background-color: yellow;" text="IU" />
+      <Line endX="655.0" layoutX="99.0" layoutY="140.0" startX="-100.0" />
+      <Line endX="140.0" endY="-59.0" layoutX="454.0" layoutY="72.0" startX="140.0" startY="501.0" />
+      <Text layoutX="630.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30;" text="2023" wrappingWidth="86.0000029206276" />
+      <Label layoutX="-3.0" layoutY="434.0" prefHeight="126.0" prefWidth="757.0" style="-fx-background-color: gray;" textOverrun="LEADING_ELLIPSIS" />
+      <Line endX="665.5" layoutX="89.0" layoutY="214.0" startX="-100.0" stroke="#00000084">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Line>
+      <Line endX="649.5" endY="2.499969482421875" layoutX="106.0" layoutY="280.0" startX="-106.0" startY="2.5" stroke="#00000084">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Line>
+      <Line endX="657.2928466796875" endY="-3.0517578125E-5" layoutX="99.0" layoutY="347.0" startX="-100.0" stroke="#00000084">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#bc4c4c" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Line>
+      <Button fx:id="boton" defaultButton="true" layoutX="294.0" layoutY="463.0" mnemonicParsing="false" onAction="#iniciarSimulacion" prefHeight="68.0" prefWidth="170.0" style="-fx-background-color: #B0E0E6; -fx-background-radius: white; -fx-border-radius: 20;" text="Iniciar Simulacion" />
+      <Label layoutX="635.0" layoutY="165.0" style="-fx-font-size: 30;" text="22%" />
+      <Label layoutX="635.0" layoutY="231.0" style="-fx-font-size: 30;" text="60%" />
+      <Label layoutX="635.0" layoutY="297.0" style="-fx-font-size: 30;" text="10%" />
+      <Label layoutX="635.0" layoutY="370.0" style="-fx-font-size: 30;" text="25%" />
+      <MenuBar layoutX="1.0" layoutY="-2.0" prefHeight="24.0" prefWidth="756.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="BBDD">
+            <items>
+              <MenuItem fx:id="itembbdd" mnemonicParsing="false" onAction="#borrarTabla" text="Vaciar urna" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Estadisticas">
+            <items>
+                  <MenuItem fx:id="mitemComu" mnemonicParsing="false" onAction="#abrirGrafico2" text="Comunidades" />
+              <MenuItem fx:id="mitemRango" mnemonicParsing="false" onAction="#abrirGrafico" text="Rangos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="14.0" layoutY="70.0" prefHeight="38.0" prefWidth="568.0" style="-fx-font-size: 30;" text="Los partidos mas votados a nivel nacional" textAlignment="RIGHT" />
+   </children>
+</AnchorPane>
